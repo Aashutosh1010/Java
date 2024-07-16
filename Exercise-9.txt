@@ -1,0 +1,47 @@
+public class Rectangle {
+	double x;
+	double y;
+	double width; 
+	double height;
+	Rectangle(){
+		x=0; y=0; height=1; width=1;
+	}
+	Rectangle(double p, double q, double h, double w){
+		x = p;
+		y = q;
+		height = h;
+		width = w;
+	}
+	double getArea(){
+		return height*width;
+	}
+	double getPerimeter(){
+		return ((2*height)+(2*width));
+	}
+	boolean check(double k, double l){
+		boolean c;
+		if(k<=width && l<=height)
+		{
+			c= true;
+		}
+		else
+		{
+			c=false;
+		}
+		return c;
+	}
+	public static void main(String[] args) {
+
+		Rectangle ob = new Rectangle();
+		Rectangle ob2 = new Rectangle(1.0,1.0,2.0,2.0);
+                
+		System.out.println("The Area = "+ ob.getArea());		
+                System.out.println("The Perimeter = "+ ob.getPerimeter());
+		System.out.println(ob.check(1,1));
+                
+                System.out.println();
+		System.out.println("The Area = "+ob2.getArea());		
+                System.out.println("The Perimeter = "+ob2.getPerimeter());
+		System.out.println(ob2.check(1,1));
+	}
+}
